@@ -5,6 +5,9 @@ const app = express();
 
 const PORT = process.env.PORT || 8000;
 
+
+const db = require('./models');
+
 // Sets up our server to parse our request body for usage
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -13,14 +16,14 @@ app.use(express.json());
 //     res.json({ message: "About information..."});
 // });
 
-app.use(express.static(path.join(__dirname, 'app/public')));
+app.use(express.static(path.join(__dirname, 'public')));
 console.log(__dirname);
 
 // Routes
 // -----------------
 
-require('./app/routing/apiRoutes.js')(app);
-require('./app/routing/htmlRoutes.js')(app);
+require('./routes/api-routes.js')(app);
+require('./routes/html-routes.js')(app);
 
 app.listen(PORT, function() {
     console.log("Listening on Port: " + PORT);
