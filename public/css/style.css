@@ -1,0 +1,40 @@
+main {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #777777;
+    width: 960px;
+    margin: 0 auto;
+    clear: both;
+    background-color: white;
+    margin-top: 20px;
+    border: 1px solid #cccccc;
+    margin-bottom: 70px;
+    overflow: hidden;
+}
+
+.topNav {
+    border-bottom: 1px solid #cccccc;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.topNavContainer {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#bamazonHeader {
+    float: left;
+    background-color: #4AAAA5;
+    color: white;
+    padding: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}

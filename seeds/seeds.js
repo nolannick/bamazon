@@ -5,7 +5,7 @@ let items = [
         product_name: "Catan",
         department_name: "Board Games",
         price: 54.99,
-        stock_quantity: 100
+        stock_quantity: 200
     },
     {
         product_name: "Mario Party Switch",
@@ -65,7 +65,7 @@ let items = [
 
 db.sequelize.sync({force: true}).then(function(){
     db.Product.bulkCreate(items)
-    .then(function() {
+    .then(function(rows) {
         console.log("Success");
         db.sequelize.close();
     })
