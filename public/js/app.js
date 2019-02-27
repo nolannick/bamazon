@@ -46,7 +46,7 @@ const renderTable = function (products) {
     products.forEach(function (element) {
         $(".productTable").append(
             `<tr>
-                <td><input type="number" class="form-control bg-secondary" id="countSelection${products.indexOf(element) + 1}"></td>
+                <td><input type="number" class="form-control" min= "0" max "100" id="countSelection${products.indexOf(element) + 1}"></td>
                 <td>${element.product_name}</td>
                 <td>${element.stock_quantity}</td>
                 <td>$ ${element.price}</td>
